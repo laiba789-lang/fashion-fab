@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fashion Fab | Online Fashion Store</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <span class="logo-icon">👗</span> fashion fab
+        </div>
+        <button class="cart-btn" id="cartBtn" aria-label="View cart">
+            🛒<span class="cart-count" id="cartCount">0</span>
+        </button>
+        <nav>
+            <a href="#categories">Categories</a>
+            <a href="#collections">Collections</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Step Into Style</h2>
+            <p>Discover the latest trends and exclusive collections at Fashion Fab. Elevate your wardrobe with our handpicked styles for every season!</p>
+            <a href="#categories" class="cta-btn">Shop Categories</a>
+        </div>
+    </section>
+    <h2 class="section-title" id="categories">Shop by Category</h2>
+    <section class="categories">
+        <div class="category-card" data-category="womens-clothing">
+            <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=600&q=80" alt="Women's Clothing">
+            <h3>Women's Clothing</h3>
+            <p>Dresses, tops, skirts, and more for every occasion.</p>
+        </div>
+        <div class="category-card" data-category="mens-clothing">
+            <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=600&q=80" alt="Men's Clothing">
+            <h3>Men's Clothing</h3>
+            <p>Shirts, jeans, jackets, and more for modern men.</p>
+        </div>
+        <div class="category-card" data-category="womens-accessories">
+            <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=600&q=80" alt="Women's Accessories">
+            <h3>Women's Accessories</h3>
+            <p>Bags, jewelry, scarves, and more to complete your look.</p>
+        </div>
+        <div class="category-card" data-category="mens-accessories">
+            <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=600&q=80" alt="Men's Accessories">
+            <h3>Men's Accessories</h3>
+            <p>Watches, belts, wallets, and more for stylish men.</p>
+        </div>
+    </section>
+    <h2 class="section-title" id="collections">Latest Collections</h2>
+    <section class="collections">
+        <div class="collection-card" data-name="Summer Dress" data-price="39" data-img="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=600&q=80">
+            <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=600&q=80" alt="Summer Dress">
+            <div class="card-content">
+                <h3>Summer Dress</h3>
+                <p>Breezy, vibrant, and perfect for sunny days. Explore our new arrivals!</p>
+                <div class="price">$39</div>
+                <button class="add-to-cart cta-btn">Add to Cart</button>
+            </div>
+        </div>
+        <div class="collection-card" data-name="Men's Casual Shirt" data-price="29" data-img="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=600&q=80">
+            <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=600&q=80" alt="Men's Casual Shirt">
+            <div class="card-content">
+                <h3>Men's Casual Shirt</h3>
+                <p>Effortless style for every day. Shop the latest in men's fashion.</p>
+                <div class="price">$29</div>
+                <button class="add-to-cart cta-btn">Add to Cart</button>
+            </div>
+        </div>
+        <div class="collection-card" data-name="Chic Bag" data-price="49" data-img="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=600&q=80">
+            <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=600&q=80" alt="Chic Bag">
+            <div class="card-content">
+                <h3>Chic Bag</h3>
+                <p>Complete your look with our chic bags, jewelry, and more.</p>
+                <div class="price">$49</div>
+                <button class="add-to-cart cta-btn">Add to Cart</button>
+            </div>
+        </div>
+        <div class="collection-card" data-name="Men's Watch" data-price="59" data-img="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=600&q=80">
+            <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=600&q=80" alt="Men's Watch">
+            <div class="card-content">
+                <h3>Men's Watch</h3>
+                <p>Elegant watches and accessories for men.</p>
+                <div class="price">$59</div>
+                <button class="add-to-cart cta-btn">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+    <div class="cart-modal" id="cartModal">
+        <div class="cart-content">
+            <button class="close-cart" id="closeCart">&times;</button>
+            <h2>Your Cart</h2>
+            <div class="cart-items" id="cartItems"></div>
+            <div class="cart-total" id="cartTotal">Total: $0</div>
+            <button class="checkout-btn" id="checkoutBtn">Secure Checkout</button>
+        </div>
+    </div>
+    <section id="about">
+        <h2 class="section-title">About Fashion Fab</h2>
+        <p style="max-width:700px;margin:0 auto 40px auto;text-align:center;">Fashion Fab is your go-to destination for the latest in fashion. We curate the best styles from around the world, ensuring quality and trendsetting designs for every occasion. Shop with us and experience the fab side of fashion!</p>
+    </section>
+    <section id="contact">
+        <h2 class="section-title">Contact Us</h2>
+        <p style="text-align:center;">Have questions? Email us at <a href="mailto:info@fashionfab.com">info@fashionfab.com</a> or call (123) 456-7890.</p>
+    </section>
+    <footer>
+        <div class="footer-links">
+            <a href="#">Home</a>
+            <a href="#categories">Categories</a>
+            <a href="#collections">Collections</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </div>
+        <a href="https://wa.me/1234567890" class="whatsapp-fab" target="_blank" title="Chat with us on WhatsApp">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" style="width:32px;height:32px;vertical-align:middle;"> Chat with us
+        </a>
+        <br>
+        &copy; 2025 Fashion Fab. All rights reserved.
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
